@@ -1,0 +1,131 @@
+<! -
+Ten program jest wolnym oprogramowaniem: możesz go rozprowadzać dalej i / lub modyfikować na warunkach Powszechnej Licencji Publicznej GNU opublikowanej przez Free Software Foundation, według wersji 3 tej Licencji lub (do wyboru) którejś z późniejszych wersji.
+Ten program jest rozpowszechniany w nadziei, że będzie użyteczny, ale BEZ ŻADNEJ GWARANCJI; nawet bez żadnej gwarancji przydatności handlowej lub przydatności do określonych CELU. Zobacz GNU General Public License więcej szczegółów.
+Powinieneś otrzymać kopię GNU General Public License wraz z tym programem. Jeśli nie, patrz http://www.gnu.org/licenses/.
+! ->
+< Html >
+< Głowy >
+< Meta  http-equiv = " Content-Type "  treść = " text / html; charset = UTF-8 " />
+< Title > Wikipedia Search </ title >
+< Link  rel = " icon "  typ = " image / png "  href = " img / icon16.png " >
+< Script  src = " js / jquery-2.1.3.min.js " > </ script >
+< Script  src = " js / wikipedia.js " > </ script >
+< Link  href = " styles.css "  rel = " stylesheet "  typ = " text / css " >
+</ Głowa >
+< Body >
+	< Sekcja  id = " wrapper "  class = " wrapper włączone " >
+		< H1 > Wikipedia wyszukiwania - Ustawienia </ h1 >
+		< Article >
+			< H2 > Jak używać </ h2 >
+			< P > Aby wyszukać, wystarczy wpisać "wiki" w pasku adresu, a następnie spację, a następnie nazwę artykułu chcesz. Żywe sugestie z Wikipedii są wyświetlane podczas wpisywania, w wybranym języku. </ P >
+			< P > Ponadto można wybrać dowolny wyraz lub frazę w internecie, kliknij prawym przyciskiem myszy i szukać go w Wikipedii natychmiast. </ P >
+			< P > Wikipedia Search jest open-source na licencji GPLv3 < a  href = " http://github.com/corbindavenport/wikipedia-search~~HEAD=pobj " > na GitHub </ >. </ P >
+		</ Article >
+		< Article >
+			< Sekcja  klasy = " Ustawienia karty " >
+			< H2 > Ustawienia </ h2 >
+			< P >
+				< Div  id = " protocolalert " > < b > Korzystanie z protokołu HTTP nie jest zalecane. Proszę używać go tylko wtedy, gdy wyszukiwania HTTPS nie działa. </ B > < br /> < br /> </ div >
+				< Table >
+					< Tr >
+						< Td >
+							Język:
+						</ Td >
+						< Td >
+							< Select  id = " język "  name = " language " >
+								<! - 100,000 stron treści, posortowane według latynizacji ->
+								< Opcja  wartość = " ar "  lang = " ar " > العربية </ opcja > <! - Al-'Arabīyah ->
+								< Opcja  wartość = " AZ "  lang = " az " > Azərbaycanca </ opcja >
+								< Opcja  wartość = " bg "  lang = " bg " > Български </ opcja > <! - Bǎlgarski ->
+								< Opcja  wartość = " zh-min-nan "  lang = " nan " > Ban-LAM-GU / HO-LO-oe </ opcja >
+								< Opcja  wartość = " być "  lang = " być " > Беларуская (Акадэмічная) </ opcja > <! - Belaruskaya (Akademichnaya) ->
+								< Opcja  wartość = " ok "  lang = " ca " > Català </ opcja >
+								< Opcja  wartość = " cs "  lang = " cs " > Čeština </ opcja >
+								< Opcja  wartość = " da "  lang = " da " > Dansk </ opcja >
+								< Opcja  wartość = " de "  lang = " de " > Deutsch </ opcja >
+								< Opcja  wartość = " et "  lang = " et " > Eesti </ opcja >
+								< Opcja  wartość = " el "  lang = " el " > Ελληνικά </ opcja > <! - Ellinika ->
+								< Opcja  wartość = " en "  lang = " pl " > angielski </ opcja >
+								< Opcja  wartość = " es "  lang = " es " > Español </ opcja >
+								< Opcja  wartość = " eo "  lang = " eo " > Esperanto </ opcja >
+								< Opcja  wartość = " eu "  lang = " eu " > Euskara </ opcja >
+								< Opcja  wartość = " fa "  lang = " fa " > فارسی </ opcja > <! - Farsi ->
+								< Opcja  wartość = " fr "  lang = " fr " > Français </ opcja >
+								< Opcja  wartość = " GL "  lang = " GL " > Galego </ opcja >
+								< Opcja  wartość = " ko "  lang = " ko " > 한국어 </ opcja > <! - Hangugeo ->
+								< Opcja  wartość = " hy "  lang = " hy " > Հայերեն </ opcja > <! - Hayeren ->
+								< Opcja  wartość = " hi "  lang = " hi " > हिन्दी </ opcja > <! - Hindi ->
+								< Opcja  wartość = " hr "  lang = " h " > Hrvatski </ opcja >
+								< Opcja  wartość = " id "  lang = " id " > indonezyjski </ opcja >
+								< Opcja  wartość = " on "  lang = " on " > Italiano </ opcja >
+								< Opcja  wartość = " on "  lang = " on " > עברית </ opcja > <! -'Ivrit ->
+								< Opcja  wartość = " ka "  lang = " ka " > ქართული </ opcja > <! - Kartuli ->
+								< Opcja  wartość = " la "  lang = " la " > Latina </ opcja >
+								< Opcja  wartość = " lt "  lang = " lt " > Lietuvių </ opcja >
+								< Opcja  wartość = " hu "  lang = " hu " > Magyar </ opcja >
+								< Opcja  Wartość = " ms "  lang = " ms " > Specs </ opcja >
+								< Opcja  wartość = " min "  lang = " min " > Bahaso Minangkabau </ opcja >
+								< Opcja  wartość = " NL "  lang = " NL " > Nederlands </ opcja >
+								< Opcja  wartość = " ja "  lang = " ja " >日本語</ opcja > <! - Nihongo ->
+								< Opcja  wartość = " no "  lang = " nb " > Norsk (Bokmål) </ opcja >
+								< Opcja  wartość = " nn "  lang = " nn " > Norsk (Nynorsk) </ opcja >
+								< Opcja  wartość = " CE "  lang = " CE " > Нохчийн </ opcja > <! - Noxçiyn ->
+								< Opcja  wartość = " uz "  lang = " uz " > O'zbekcha / Ўзбекча </ opcja >
+								< Opcja  wartość = " en "  lang = " pl " > Polski </ opcja >
+								< Opcja  wartość = " pt "  lang = " pt " > Português </ opcja >
+								< Opcja  wartość = " kk "  lang = " kk " > Қазақша / Qazaqşa / قازاقشا </ opcja >
+								< Opcja  wartość = " ro "  lang = " ro " > Romana </ opcja >
+								< Opcja  wartość = " ru "  lang = " ru " > Русский </ opcja > <! - Russkij ->
+								< Opcja  wartość = " proste "  lang = " pl " > Proste angielski </ opcja >
+								< Opcja  wartość = " CEB "  lang = " CEB " > Sinugboanong Binisaya </ opcja >
+								< Opcja  wartość = " sk "  lang = " sk " > Slovenčina </ opcja >
+								< Opcja  wartość = " sl "  lang = " sl " > Slovenščina </ opcja >
+								< Opcja  wartość = " sr "  lang = " sr " > Српски / Srpski </ opcja >
+								< Opcja  wartość = " sh "  lang = " sh " > Srpskohrvatski / Српскохрватски </ opcja >
+								< Opcja  wartość = " fi "  lang = " fi " > Suomi </ opcja >
+								< Opcja  wartość = " SV "  lang = " SV " > Svenska </ opcja >
+								< Opcja  wartość = " th "  lang = " th " > Create Account </ opcja > <! - Phasa Thai ->
+								< Opcja  wartość = " tr "  lang = " tr " > Türkçe </ opcja >
+								< Opcja  wartość = " pl "  lang = " pl " > Українська </ opcja > <! - Ukrayins'ka ->
+								< Opcja  wartość = " ur "  lang = " ur " > اردو </ opcja > <! - Urdu ->
+								< Opcja  wartość = " vi "  lang = " vi " > Tiếng Việt </ opcja >
+								< Opcja  wartość = " vo "  lang = " vo " > węgierski </ opcja >
+								< Opcja  wartość = " war "  lang = " war " > Winaray </ opcja >
+								< Opcja  wartość = " pl "  lang = " pl " >中文</ opcja > <! - Kierunki ->
+							</ Wybierz >
+						</ Td >
+					</ Tr >
+					< Tr >
+						< Td >
+							Protokół:
+						</ Td >
+						< Td >
+							< Select  id = " Protokół "  name = " Protokół " >
+								< Opcja  wartość = " https: // " > HTTPS </ opcja >
+								< Opcja  wartość = " http: // " > HTTP (niebezpieczne) </ opcja >
+							</ Wybierz >
+						</ Td >
+					</ Tr >
+				</ Table >
+				< P > < input  typ = " checkbox "  id = " Skrót " > < label  dla = " skrót "  id = " skrótów-label " > włączyć ustawienia skrótów w wynikach wyszukiwania </ label > </ p >
+				< P > < input  typ = " checkbox "  id = " contentscripts " > < label  dla = " contentscripts " > Pokaż Wikipedia Search panel Wikipedia </ label > </ p >
+				< P > < i > To zapewnia szybki dostęp do ustawień wyszukiwania Wikipedii i innych cech, podczas gdy na Wikipedii. Płyta pojawi się pod logo Wikipedia na dowolnej stronie artykułu. </ I > </ p >
+				< P > < input  typ = " checkbox "  id = " hidesearch " > < label  dla = " hidesearch " > Ukryj pasek wyszukiwania na Wikipedii stronę startową oraz art stronach (na korzyść Address Bar Search) </ label > </ p >
+			</ P >
+			</ Sekcja >
+		</ Article >
+		< Article >
+			< H2 > </ Donate h2 >
+			< P > Podobnie jak sama Wikipedia, Wikipedia Search jest całkowicie bezpłatny i otwarty dla każdego do użytku lub przyczynić się do. Jeśli okaże się, Wikipedia Szukaj użyteczna, prosimy o dotację, aby wspomóc dalszy rozwój. Oznaczałoby to dużo! </ P >
+			< Div  id = " Bitcoin " >
+				< P > < b > proszę wysyłać Bitcoin na następujący adres: </ b > </ p >
+				< P  style = " background: #ebebeb; padding: 10px; font-family: Monako, Menlo, Consolas" Courier New "monospace; text-align: center; overflow-wrap: break-word ważne; " > 1GSbhaUp8JSRepqQceHzrGhV1bPk9hcPuS </ p >
+			</ Div >
+			< Sekcja  id = " Ustawienia przyciski "  class = " przyciski "  style = " display: block; " >
+				< Input  class = " g-przycisk g-button-submit "  typ = " button "  value = " Przekaż darowiznę za pomocą PayPal " >
+				< Input  class = " g-przycisk g-button-submit "  typ = " button "  value = " Wpłać poprzez Bitcoin " >
+			</ Sekcja >
+		</ Article >
+	</ Sekcja >
+</ Body >
+</ Html >
